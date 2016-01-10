@@ -1,0 +1,209 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 0px solid #F00;
+}
+
+tr {
+	padding: 0px;
+	margin: 0px;
+}
+
+td {
+	padding: 0px;
+	margin: 0px;
+}
+
+p {
+	font-size: 24px; 
+	margin: 0px;
+}
+
+#header {
+	width: 100%;
+	height: 50px;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 5px;
+  position: relative;
+}
+
+h1 {
+	font-size: 20px; 
+	color: #00a7cf;
+	margin: 0px;
+}
+
+#candidates {
+	width: 100%;
+	height: 40px;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 5px;
+  position: relative;
+	background-color: #333;
+}
+
+td.result {
+	color: #888;
+	white-space: nowrap;
+	text-overflow: ellipsis; 
+	overflow: hidden; 
+}
+
+td.result:hover {
+	text-overflow: inherit;
+	overflow: visible;
+}
+
+p.candidate {
+	cursor: pointer;
+	margin-left: 5px;
+	color: #EEE;
+	display: inline;
+}
+
+p.selectedCandidate {
+	cursor: pointer;
+	margin-left: 5px;
+	color: #00a7cf;
+	display: inline;
+}
+
+p.separator {
+	margin-left: 5px;
+	margin-right: 5px;
+	color: #888;
+	display: inline;
+}
+
+td.language {
+	cursor: pointer;
+	width: 45px;
+}
+
+img.flag {
+	margin: 4px;
+	border: 1px solid #AAA;
+}
+
+#toolbar {
+	width: 100%;
+	height: 32px;
+	margin: 0px;
+  position: relative;
+}
+
+#tools {
+	float: left;
+	width: 200px;
+	height: 30px;
+	left: 0px;
+	margin: 0px;
+}
+
+.tabCell {
+	background-image: url(images/tab.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	border: 0px solid #F00;
+	padding: 0px;
+	margin: 0px;
+}
+
+#clear {
+	padding-top: 5px; 
+	padding-left: 10px;
+}
+
+#undo {
+	padding-left: 20px;
+}
+
+#redo {
+	padding-left: 20px;
+}
+
+#transparency {
+	float: right;
+	width: 200px;
+	height: 30px;
+}
+
+section {
+	margin: -8px auto 0;
+	position: absolute;
+}
+
+#slider{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #333 #333 #777 #333;
+	border-radius: 3px;
+	width: 150px;
+	position: absolute;
+	height: 12px;
+	background-color: #8e8d8d;
+	background: url('images/bg-track.png') repeat top left;
+  box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5), 0 1px 0 0px rgba(250, 250, 250, .5);
+}
+
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background: url('images/handle.png') no-repeat 50% 50%;
+	outline: none;
+	top: -7px;
+	margin-left: -12px;
+}
+
+.ui-slider-range {
+	background: #FFF; /* Old browsers */
+	background: -moz-linear-gradient(top, #FFF 0%, #CCC 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFF), color-stop(100%, #CCC)); /* Chrome, Safari4+ */
+	background: -webkit-linear-gradient(top, #FFF 0%,#CCC 100%); /* Chrome10+, Safari5.1+ */
+	background: -o-linear-gradient(top, #FFF 0%,#CCC 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #FFF 0%,#CCC 100%); /* IE10+ */
+	background: linear-gradient(top, #FFF 0%,#CCC 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#CCC', GradientType=0); /* IE6-9 */
+	position: absolute;
+	border: 0;
+	top: 0;
+	height: 100%;
+	border-radius: 3px;
+}
+
+
+#canvas {
+	width: 100%;
+	width: -webkit-calc(100% - 2px);
+	width: -moz-calc(100% - 2px);
+	width: calc(100% - 2px);
+	height: 100%;
+	height: -webkit-calc(100% - (50px + 40px + 32px + 5px + 5px + 6px));
+	height: -moz-calc(100% - 138px);
+	height: calc(100% - 138px);
+}
+
+#inkCanvas {
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFC8; 
+	border: 1px solid #CCC;
+	touch-action: none; 
+	-ms-touch-action: none;
+}

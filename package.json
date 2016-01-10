@@ -1,0 +1,41 @@
+{
+    "name": "ClientAPI",
+    "version": "0.0.1",
+    "description": "ClientAPI",
+    "main": "ClientInkStrokeAPI",
+    "author": {
+        "name": "David Perez",
+        "email": "david.perez@apexdatasolutions.net"
+    },
+    "dependencies": {
+        "fs": "0.0.2",
+        "http": "0.0.0",
+        "jquery-ui": "^1.10.5",
+        "ink2textLogger": "file:..\\ink2textlogger"
+    },
+    "devDependencies": {
+        "async": "^1.4.2",
+        "body-parser": "^1.13.3",
+        "bson": "^0.4.11",
+        "cookie-parser": "^1.3.5",
+        "express": "^4.13.3",
+        "express3": "0.0.0",
+        "fs": "0.0.2",
+        "http": "0.0.0",
+        "https": "^1.0.0",
+        "jquery": "^2.1.4",
+        "jquery-ui": "^1.10.5",
+        "mongodb": "^2.0.43",
+        "mongoose": "^4.1.7",
+        "myscript": "^1.0.15",
+        "paper": "^0.9.24",
+        "path": "^0.12.7",
+        "socket.io": "^1.3.7",
+        "socket.io-client": "^1.3.7",
+        "url": "^0.11.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://david.perez@pc.apexdatasolutions.net/scm/iff/inkstrokes-restapi-demo.git"
+  },
+}

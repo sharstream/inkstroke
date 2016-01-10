@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Client API</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+
+                <li class="active">
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#">Give a Report</a></li>
+                        <li><a href="#">Resume</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span> Configure</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Screen Notes</a></li>
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Screen Form</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x "></i></span>Overview</a>
+                </li>
+                <li>
+                    <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-cart-plus fa-stack-1x "></i></span>Conversion</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Form</a></li>
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Text</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x "></i></span>About</a>
+
+                </li>
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Services</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Apex Data Solutions, LLC</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid xyz">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <div id="header">
+        <table border="0">
+            <tr>
+                <td align="center" valign="middle" width="80"><a href="http://www.apexdatasolutions.net/" target="_blank"><img src="images/apex_icon.png"></a></td>
+                <td align="right" valign="middle" style="padding-bottom: 5px; padding-right:5px;"><h1>Inkstroke Toolkit<br />Demo</h1></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div id="candidates">
+            <table border="0" style="table-layout:fixed;">
+                <tr>
+                    <td id="result" class="result" width="600" align="center" valign="middle">&nbsp;</td>
+                    <td class="language"><img class="flag" id="flag" src="images/us.png" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="toolbar">
+            <div id="tools">
+                <table border="0">
+                    <tr>
+                        <td class="tabCell" align="left" valign="top">
+                            <img id="clear" style="padding-top: 5px; padding-left: 5px;" src="images/clear.png" />
+                            <img id="undo" style="padding-left: 18px;" src="images/undo_disabled.png" />
+                            <img id="redo" style="padding-left: 18px;" src="images/redo_disabled.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="transparency">
+                <table border="0">
+                    <tr>
+                        <td width="35">
+                            <img src="images/transp.png" />
+                        </td>
+                        <td>
+                            <section>
+                                <div id="slider"></div>
+                            </section>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="DivCanvas">
+            <canvas id="canvas" width="1300" height="600" style="background-color: lightyellow;"></canvas>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="lib/core-min.js"></script>
+    <script type="text/javascript" src="lib/x64-core-min.js"></script>
+    <script type="text/javascript" src="lib/sha512-min.js"></script>
+    <script type="text/javascript" src="lib/hmac-min.js"></script>
+    <script type="text/javascript" src="lib/q.js"></script>
+    <script type="text/javascript" src="lib/hand.minified-1.3.8.js"></script>
+    <script type="text/javascript" src="lib/myscript.min.js"></script>
+    <script>
+        (function () {
+            var result = document.getElementById('result');
+            var canvas = document.getElementById("canvas");
+            var img = document.createElement('img');
+            var context = canvas.getContext("2d");
+            // Adding instructions
+            context.fillText("                                                                                        Drop an image onto the canvas", 240, 200);
+            context.fillText("                                                                                        Click a spot to set as brush color", 240, 220);
+            var pointerId;
+            var instanceId;
+            var applicationKey = "8d6b9b93-3e97-4ec0-8cda-ce9f2c4b5a00";
+            var hmacKey = "7ee8dc37-c44e-4a13-a40b-e2f797ac9a8b";
+            var inkManager = new MyScript.InkManager();
+            var textRenderer = new MyScript.TextRenderer();
+            var textRecognizer = new MyScript.TextRecognizer();
+            textRecognizer.getParameters().setLanguage('en_US');
+            var hasText = true;
+            clearCanvas = function () {
+                if (hasText) {
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    hasText = false;
+                }
+            };
+            function doRecognition() {
+                if (inkManager.isEmpty()) {
+                    result.innerHTML = '';
+                } else {
+                    var inputUnit = new MyScript.TextInputUnit();
+                    inputUnit.setComponents(inkManager.getStrokes());
+                    var units = [inputUnit];
+                    textRecognizer.doSimpleRecognition(applicationKey, instanceId, units, hmacKey).then(
+                        function (data) {
+                            if (!instanceId) {
+                                instanceId = data.getInstanceId();
+                            } else if (instanceId !== data.getInstanceId()) {
+                                return;
+                            }
+                            result.innerHTML = data.getTextDocument().getTextSegmentResult().getSelectedCandidate().getLabel();
+                            console.log(result.innerHTML);
+                            getData();
+                            console.log("Web service called!!!");
+                        }
+                    );
+                }
+            }
+            var MAX_HEIGHT = 600
+            function render(src) {
+                var image = new Image();
+                image.onload = function () {
+                    if (image.height > MAX_HEIGHT) {
+                        image.height *= MAX_HEIGHT / image.height;
+                        image.height = MAX_HEIGHT;
+                    }
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    canvas.width = image.width;
+                    canvas.height = image.height;
+                    context.drawImage(image, 0, 0, image.width, image.height);
+                };
+                image.src = src;
+            };
+            img.addEventListener('load', function () {
+                clearCanvas();
+                context.drawImage(img, 0, 0);
+
+            }, false);
+            canvas.addEventListener('mousedown', function (evt) {
+                clearCanvas();
+                mouseDown = true;
+                context.beginPath();
+            }, false);
+            canvas.addEventListener('mouseup', function (evt) {
+                mouseDown = false;
+                var colors = context.getImageData(evt.layerX, evt.layerY, 1, 1).data;
+       
+            }, false);
+            // To enable drag and drop
+            canvas.addEventListener('dragover', function (evt) {
+                evt.preventDefault();
+            }, false);
+            // Handle dropped image file - only Firefox and Google Chrome
+            canvas.addEventListener('drop', function (evt) {
+                var files = evt.dataTransfer.files;
+                if (files.length > 0) {
+                    var file = files[0];
+                    if (typeof FileReader !== "undefined" && file.type.indexOf("image") != -1) {
+                        var reader = new FileReader();
+                        reader.onload = function (evt) {
+                            render(evt.target.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+                evt.preventDefault();
+            }, false);
+            canvas.addEventListener('pointerdown', function (event) {
+                if (!pointerId) {
+                    pointerId = event.pointerId;
+                    event.preventDefault();
+                    textRenderer.drawStart(event.offsetX, event.offsetY);
+                    inkManager.startInkCapture(event.offsetX, event.offsetY);
+                }
+            }, false);
+            canvas.addEventListener('pointermove', function (event) {
+                if (pointerId === event.pointerId) {
+                    event.preventDefault();
+                    textRenderer.drawContinue(event.offsetX, event.offsetY, context);
+                    inkManager.continueInkCapture(event.offsetX, event.offsetY);
+                }
+            }, false);
+            canvas.addEventListener('pointerup', function (event) {
+                if (pointerId === event.pointerId) {
+                    event.preventDefault();
+                    textRenderer.drawEnd(event.offsetX, event.offsetY, context);
+                    inkManager.endInkCapture();
+                    pointerId = undefined;
+                    doRecognition();
+                }
+            }, false);
+            canvas.addEventListener('pointerleave', function (event) {
+                if (pointerId === event.pointerId) {
+                    event.preventDefault();
+                    textRenderer.drawEnd(event.offsetX, event.offsetY, context);
+                    inkManager.endInkCapture();
+                    pointerId = undefined;
+                    doRecognition();
+                }
+            }, false);
+            // Save image
+            var saveImage = document.createElement('button');
+            saveImage.innerHTML = "Save canvas";
+            saveImage.addEventListener('click', function (evt) {
+                window.open(canvas.toDataURL("images/png"));
+                evt.preventDefault();
+            }, false);
+            
+            function getData() {
+                var data = { "textFound": document.getElementById('result').innerHTML , "imageData":encodeURIComponent(document.getElementById("canvas").toDataURL("images/png"))};
+                $.ajax({
+                    url: "http://localhost:1337/test",
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    img: encodeURIComponent(document.getElementById("canvas").toDataURL("images/png")),
+                    imgExt: 'npg',
+                    success: successFn,
+                    error: errorFn
+                });
+            };
+            function successFn(data) {
+                console.log("Setting result");
+                console.log(JSON.stringify(data));
+            }
+
+            function errorFn(strErr) {
+                alert(strErr);
+            }
+        })();
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        $("#menu-toggle-2").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled-2");
+            $('#menu ul').hide();
+        });
+
+        function initMenu() {
+            $('#menu ul').hide();
+            $('#menu ul').children('.current').parent().show();
+            $('#menu li a').click(
+              function () {
+                  var checkElement = $(this).next();
+                  if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                      return false;
+                  }
+                  if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                      $('#menu ul:visible').slideUp('normal');
+                      checkElement.slideDown('normal');
+                      return false;
+                  }
+              });
+        }
+        $(document).ready(function () { initMenu(); });
+    </script>
+</body>
+</html>
