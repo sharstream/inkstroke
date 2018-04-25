@@ -18,16 +18,16 @@ To use the MyScript on an HTML page, the page must reference both the `JQuery` s
 - MyScript
 - Nodejs
 
-#requirement for papejs libraries
-$ sudo apt-get install nodejs
+### required file to install papejs libraries
+`$ sudo apt-get install nodejs`
 
-$ sudo apt-get install node
+`$ sudo apt-get install node`
 
-$ sudo apt-get install npm
+`$ sudo apt-get install npm`
 
-$ sudo npm install bower
+`$ sudo npm install bower`
 
-$ sudo npm install paper
+`$ sudo npm install paper`
 
 **I/O Devices:**
 
