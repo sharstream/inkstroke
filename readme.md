@@ -1,8 +1,10 @@
 
 # Inkstrokes
-Copyright &copy; Apex Data Solutions,LLC
+Copyright &copy; Anyone
 
-This is the inkstrokes specification
+This is the inkstrokes specification. Second edition using paperjs 0.12.0 version and png buffer. 
+
+Including serverless and saving the data in S3 bucket.
 
 **Installation:**
 
@@ -10,7 +12,7 @@ To use the MyScript on an HTML page, the page must reference both the `JQuery` s
 
 **Library:**
 
-- paperjs 0.9.22 ... (optinal)
+- paperjs 0.9.22 ... (optional)
 - potrace 0.1.2 binding python lib (optinal)
 - HTML5 
 - jquery 1.5 or high... query language
